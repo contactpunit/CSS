@@ -4,7 +4,7 @@
     height: 500px;
     /* grid-template-columns: 200px 5rem 20% auto; */
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 2.5rem minmax(10px, 200px) 30px;
+    grid-template-rows: [firstrow] 2.5rem [secondrow] minmax(10px, 200px) [thirdrow] 30px;
 }
 
 .el1 {
@@ -24,8 +24,8 @@
     background: rgba(0, 128, 0, 0.5);
     grid-column-start: 3;
     grid-column-end: span 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: firstrow;
+    grid-row-end: thirdrow;
 }
 
 .el4 {
