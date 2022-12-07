@@ -5,6 +5,9 @@
     /* grid-template-columns: 200px 5rem 20% auto; */
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: [firstrow] 2.5rem [secondrow] minmax(10px, 200px) [thirdrow] 30px;
+    /* grid-column-gap: 20px;
+    grid-row-gap: 10px; */
+    grid-gap: 10px;
 }
 
 .el1 {
@@ -13,8 +16,7 @@
 
 .el2 {
     background: rgba(255, 0, 0, 0.5);
-    grid-column-start: 2;
-    grid-column-end: -1;
+    grid-column: 1 / -1;
     grid-row-start: 2;
     grid-row-end: span 1;
     z-index: 2;
@@ -22,8 +24,8 @@
 
 .el3 {
     background: rgba(0, 128, 0, 0.5);
-    grid-column-start: 3;
-    grid-column-end: span 2;
+    grid-column-start: 2;
+    grid-column-end: sp-1;
     grid-row-start: firstrow;
     grid-row-end: thirdrow;
 }
